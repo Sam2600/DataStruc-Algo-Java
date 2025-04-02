@@ -1,0 +1,50 @@
+{
+   // Use IntelliSense to learn about possible attributes.
+   // Hover to view descriptions of existing attributes.
+   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+   "version": "0.2.0",
+   "configurations": [
+      
+      {
+         "type": "java",
+         "name": "Current File",
+         "request": "launch",
+         "mainClass": "${file}"
+      },
+      {
+         "type": "java",
+         "name": "Solution",
+         "request": "launch",
+         "mainClass": "DataStructure.Hashing.Solution",
+         "projectName": "DSA_e19699ce"
+      },
+      {
+         "type": "java",
+         "name": "Solution(1)",
+         "request": "launch",
+         "mainClass": "DataStructure.Stack.Solution",
+         "projectName": "DSA_e19699ce"
+      },
+      {
+         "type": "java",
+         "name": "Solution(2)",
+         "request": "launch",
+         "mainClass": "Solution",
+         "projectName": "DSA_e19699ce"
+      },
+      {
+         "type": "java",
+         "name": "Solution(3)",
+         "request": "launch",
+         "mainClass": "problems.MergeSortArray.Solution",
+         "projectName": "DSA_e19699ce"
+      },
+      {
+         "type": "java",
+         "name": "Solution(4)",
+         "request": "launch",
+         "mainClass": "problems.MergeSortList.Solution",
+         "projectName": "DSA_e19699ce"
+      }
+   ]
+}
