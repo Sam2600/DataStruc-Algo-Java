@@ -1,5 +1,6 @@
 package problems.SubSequenceString;
 
+@SuppressWarnings("unused")
 public class Soultion {
 
    public static void main(String[] args) {

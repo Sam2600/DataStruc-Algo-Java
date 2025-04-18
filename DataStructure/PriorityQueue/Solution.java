@@ -1,125 +1,139 @@
 package DataStructure.PriorityQueue;
 
+import java.util.PriorityQueue;
+
 public class Solution {
 
    public static void main(String[] args) {
 
-      PriorityQueue pq = new PriorityQueue(5);
+      // PriorityQueue pq = new PriorityQueue(5);
       
-      pq.maxInsert(4);
-      pq.maxInsert(1);
-      pq.maxInsert(5);
-      pq.maxInsert(6);
-      pq.maxInsert(2);
-      pq.maxInsert(8);
-      pq.maxInsert(9);
-      pq.maxInsert(7);
-      pq.maxInsert(10);
-      pq.maxInsert(3);
-      pq.maxInsert(11);
-      pq.printAll();
-      pq.maxRemove();
-      System.out.println();
-      System.out.println("==================================================");
-      System.out.println();
-      pq.printAll();
+      // pq.maxInsert(4);
+      // pq.maxInsert(1);
+      // pq.maxInsert(5);
+      // pq.maxInsert(6);
+      // pq.maxInsert(2);
+      // pq.maxInsert(8);
+      // pq.maxInsert(9);
+      // pq.maxInsert(7);
+      // pq.maxInsert(10);
+      // pq.maxInsert(3);
+      // pq.maxInsert(11);
+      // pq.printAll();
+      // pq.maxRemove();
+      // System.out.println();
+      // System.out.println("==================================================");
+      // System.out.println();
+      // pq.printAll();
+
+      PriorityQueue<Integer> pq = new PriorityQueue<>();
+      pq.add(4);
+      pq.add(2);
+      pq.add(2);
+      pq.add(2);
+
+      for (int i = 0; i < 4; i++) {
+         System.out.println(pq.poll());
+      }
+      
+      // System.out.println(pq.poll());
    }
 }
 
-class PriorityQueue {
+// class PriorityQueue {
 
-   int[] heap;
-   int n = 0;
+//    int[] heap;
+//    int n = 0;
 
-   public PriorityQueue(int capacity) {
-      heap = new int[capacity];
-   }
+//    public PriorityQueue(int capacity) {
+//       heap = new int[capacity];
+//    }
 
-   public int getSize() {
-      return n;
-   }
+//    public int getSize() {
+//       return n;
+//    }
    
-   public boolean isFull() {
-      return n == heap.length;
-   }
+//    public boolean isFull() {
+//       return n == heap.length;
+//    }
 
-   public void resize() {
-      int[] new_size_arr = new int[heap.length * 2];
+//    public void resize() {
+//       int[] new_size_arr = new int[heap.length * 2];
 
-      for (int i = 0; i < heap.length; i++) {
-         new_size_arr[i] = heap[i];
-      }
+//       for (int i = 0; i < heap.length; i++) {
+//          new_size_arr[i] = heap[i];
+//       }
 
-      heap = new_size_arr;
-   }
+//       heap = new_size_arr;
+//    }
 
-   public void maxInsert(int value) {
+//    public void maxInsert(int value) {
 
-      if (this.isFull()) {
-         this.resize();
-      }
+//       if (this.isFull()) {
+//          this.resize();
+//       }
 
-      heap[n] = value;
+//       heap[n] = value;
 
-      swim(n);
+//       swim(n);
 
-      n++;
-   }
+//       n++;
+//    }
 
-   public int getParentIndex(int i) {
-      return (i - 1) / 2;
-   }
+//    public int getParentIndex(int i) {
+//       return (i - 1) / 2;
+//    }
 
-   public void swim(int n) {
+//    public void swim(int n) {
 
-      while (heap[n] > heap[getParentIndex(n)]) {
+//       while (heap[n] > heap[getParentIndex(n)]) {
 
-         int tmp = heap[n];
-         heap[n] = heap[getParentIndex(n)];
-         heap[getParentIndex(n)] = tmp;
+//          int tmp = heap[n];
+//          heap[n] = heap[getParentIndex(n)];
+//          heap[getParentIndex(n)] = tmp;
 
-         n = getParentIndex(n);
-      }
+//          n = getParentIndex(n);
+//       }
 
-   }
+//    }
 
-   public int maxRemove() {
+//    public int maxRemove() {
 
-      int tmp = heap[0];
-      heap[0] = heap[n - 1];
-      heap[n - 1] = 0;
-      n--;
+//       int tmp = heap[0];
+//       heap[0] = heap[n - 1];
+//       heap[n - 1] = 0;
+//       n--;
 
-      sink(0);
+//       sink(0);
 
-      return tmp;
-   }
+//       return tmp;
+//    }
    
-   public void sink(int k) {
+//    public void sink(int k) {
 
-      while ((2 * k) + 1 <= n) {
+//       while ((2 * k) + 1 <= n) {
          
-         int j = (2 * k) + 1;
+//          int j = (2 * k) + 1;
 
-         if (heap[j] < heap[j + 1]) {
-            j++;
-         }
+//          if (heap[j] < heap[j + 1]) {
+//             j++;
+//          }
          
-         if (heap[k] > heap[j]) {
-            break;
-         }
+//          if (heap[k] > heap[j]) {
+//             break;
+//          }
 
-         int tmp = heap[k];
-         heap[k] = heap[j];
-         heap[j] = tmp;
+//          int tmp = heap[k];
+//          heap[k] = heap[j];
+//          heap[j] = tmp;
 
-         k = j;
-      }
-   }
+//          k = j;
+//       }
+//    }
 
-   public void printAll() {
-      for (int i : heap) {
-         System.out.print(i + ", ");
-      }
-   }
-}
+//    public void printAll() {
+//       for (int i : heap) {
+//          System.out.print(i + ", ");
+//       }
+//    }
+// }

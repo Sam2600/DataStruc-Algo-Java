@@ -4,7 +4,20 @@
    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
    "version": "0.2.0",
    "configurations": [
-      
+      {
+         "type": "java",
+         "name": "Solution",
+         "request": "launch",
+         "mainClass": "problems.Anagram.Solution",
+         "projectName": "DSA_e19699ce"
+      },
+      {
+         "type": "java",
+         "name": "Solution",
+         "request": "launch",
+         "mainClass": "DataStructure.Graph.Solution",
+         "projectName": "DSA_e19699ce"
+      },
       {
          "type": "java",
          "name": "Current File",

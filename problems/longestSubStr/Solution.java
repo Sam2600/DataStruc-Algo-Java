@@ -1,5 +1,6 @@
 package problems.longestSubStr;
 
+@SuppressWarnings("unused")
 public class Solution {
 
    public void substr(String s)
